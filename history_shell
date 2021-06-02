@@ -1,0 +1,55 @@
+    1  yum install -y wget && wget https://raw.githubusercontent.com/atrandys/wireguard/master/wireguard_install.sh && chmod +x wireguard_install.sh && ./wireguard_install.sh
+    2  lsmod | grep w
+    3  uname -a
+    4  ls
+    5  ./wireguard_install.sh 
+    6  systemctl stop firewalld
+    7  systemctl status firewalld
+    8  systemctl disable firewalld
+    9  cat /etc/wireguard/wg0.conf
+   10  ./wireguard_install.sh 
+   11  cd /etc/wireguard/
+   12  ls
+   13  cat client.conf 
+   14  ls
+   15  qrencode -s8 -o /etc/wireguard/wg0_client.png < /etc/wireguard/client.conf
+   16  ls
+   17  cp wg0_client.png /home/centos/
+   18  wg
+   19  top
+   20  systemctl status wg-quick@wg0
+   21  wg
+   22  dkms
+   23  wg-quick -h
+   24  wg -h
+   25  wg show
+   26  wg showconf
+   27  wg showconf wg0
+   28  ls
+   29  ./wireguard_install.sh 
+   30  cat /etc/wireguard/leo.conf
+   31  wg
+   32  qrencode -s8 -o /home/centos/leo_client.png < /etc/wireguard/leo.conf
+   33  qrencode -s8 -o /home/centos/leo_client.png < /etc/wireguard/leo.confls
+   34  ls
+   35  wg
+   36  wg --help
+   37  wg show
+   38  dkms
+   39  history
+   40  wg-quick -h
+   41  systemctl status wg-quick@wg0
+   42  ls
+   43  ./wireguard_install.sh 
+   44  history
+   45  systemctl status wg-quick@wg0
+   46  systemctl restart wg-quick@wg0
+   47  wg
+   48  journalctl -xe
+   49  wg-quick up wg0
+   50  wg-quick down wg0
+   51  wg-quick up wg0
+   52  wg
+   53  systemctl status wg-quick@wg0
+   54  wg
+   55  wg
