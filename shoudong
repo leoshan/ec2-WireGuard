@@ -1,0 +1,24 @@
+Step 1: Install the toolchain
+ Ubuntu and  Debian
+$ sudo apt-get install libelf-dev linux-headers-$(uname -r) build-essential pkg-config
+ Fedora
+$ sudo dnf install elfutils-libelf-devel kernel-devel pkg-config @development-tools
+ Red Hat Enterprise Linux / CentOS
+$ sudo yum install elfutils-libelf-devel kernel-devel pkgconfig "@Development Tools"
+ Arch
+# pacman -S linux-headers base-devel pkg-config
+ OpenSUSE
+$ sudo zypper install kernel-default-devel pkg-config
+ Alpine
+# apk add build-base linux-hardened-dev  # or linux-vanilla-dev on a vanilla kernel
+Step 2: Grab the code
+$ git clone https://git.zx2c4.com/wireguard-linux-compat
+$ git clone https://git.zx2c4.com/wireguard-tools
+Step 3: Compile and install the module
+$ make -C wireguard-linux-compat/src -j$(nproc)
+$ sudo make -C wireguard-linux-compat/src install
+(You may instead run make debug if you'd like to have additional information on what's happening in your dmesg(1).)
+
+Step 4: Compile and install the wg(8) tool
+$ make -C wireguard-tools/src -j$(nproc)
+$ sudo make -C wireguard-tools/src install
